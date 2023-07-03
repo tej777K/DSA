@@ -7,6 +7,7 @@ public class QuickSort {
         for(int i=0 ; i<arr.length ; i++){
             System.out.print(" "+arr[i]);
         }
+        
     }
 
 
@@ -41,8 +42,15 @@ public class QuickSort {
                 return i;
     }
     public static void main(String[] args) {
-        int arr[] = {6,3,9,8,2,5 ,-5};
+        int arr[] = {6,3,9,8,2,5};
+        long startTime = System.nanoTime();
+
         QuickSort(arr , 0 , arr.length-1);
+        long stopTime = System.nanoTime();
+        long elapsedTime = stopTime - startTime;
         printArr(arr);
+        System.out.println("Time Complexity in ms for n=" + arr.length + " is: " + (double) elapsedTime /1000000);
+
+
     }
 }
